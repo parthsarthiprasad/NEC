@@ -1,0 +1,31 @@
+Documentation for list all inputs videos/audios https://www.ffmpeg.org/ffmpeg-devices.html On linux
+
+ffmpeg -f fbdev true -i ""
+
+
+stream camera on linux + audio on rtmp server 
+
+ffmpeg -f v4l2 -r 30 -i /dev/video0 -deinterlace -vcodec libx264 -pix_fmt yuv420p -preset medium -g 60 -b:v 2500k -acodec libmp3lame -ar 44100 -threads 6 -qscale 3 -b:a 712000 -bufsize 512k -f flv rtmp://localhost/live/tabvn
+
+
+
+
+// for windows 
+
+use dshow 
+
+
+// for linux 
+
+Update the package index:
+# sudo apt-get update
+Install v4l2-utils deb package:
+# sudo apt-get install v4l-utils
+
+
+
+cat /etc/passwd | grep nginx 
+// if not found anything 
+cat /etc/passwd | grep www-data
+
+then do chown -R www-data:www-data /nginx
