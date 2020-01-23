@@ -109,6 +109,8 @@ while True:
     new_file = os.listdir(mem_loc+"/Videos")
     for vid_item in new_file:
         if(vid_item in vid_name):
+            continue
+        else:
             pred=Model.classify(mem_loc + "/" + vid_name)
             if(len(pred)==1):
                 continue
