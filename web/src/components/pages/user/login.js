@@ -185,11 +185,11 @@ export default class Login extends Component {
                 >
                   <input
                     onChange={this._onTextFieldChange}
-                    value={_.get(user, "email", "")}
+                    //value={_.get(user, "email", "")}
                     type={"email"}
                     className='input100'
                     name='username'
-                    placeholder='User name'
+                    placeholder='Email Address'
                   />
                   <span className='focus-input100' data-placeholder='' />
                 </div>
@@ -199,7 +199,7 @@ export default class Login extends Component {
                 >
                   <input
                     onChange={this._onTextFieldChange}
-                    value={_.get(user, "password", "")}
+                    //value={_.get(user, "password", "")}
                     className='input100'
                     type='password'
                     name='pass'
