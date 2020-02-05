@@ -3,7 +3,7 @@ from autobahn.twisted.websocket import WebSocketClientProtocol, WebSocketClientF
 import json
 import subprocess
 
-server = "127.0.0.1"  # Server IP Address or domain eg: tabvn.com
+server = "192.168.146.124"  # Server IP Address or domain eg: tabvn.com
 port = 3001  # Server Port
 
 streaming_process = None

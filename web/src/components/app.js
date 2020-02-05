@@ -8,6 +8,7 @@ import { Route, Switch } from "react-router-dom";
 import Register from "./pages/user/register";
 import Login from "./pages/user/login";
 import Store from "../store";
+import Heat from "./pages/user/heatmap";
 import _ from "lodash";
 import UserCamera from "./pages/camera/user-camera";
 import AddCamera from "./pages/camera/add-camera";
@@ -111,13 +112,15 @@ export default class App extends React.Component {
               path={"/login"}
               render={(routeProps) => <Login {...routeProps} store={store} />}
             />
+            <Route exact path='/heat' component={Heat} />
             <Route
               exact
-              path={"/register"}
+              path={"/"}
               render={(routeProps) => (
                 <Register {...routeProps} store={store} />
               )}
             />
+
             <Route
               exact
               path={"/watch/:id"}
@@ -125,7 +128,7 @@ export default class App extends React.Component {
             />
             <Route
               exact
-              path={"/"}
+              path={"/home"}
               render={(routeProps) => <Home {...routeProps} store={store} />}
             />
           </Switch>

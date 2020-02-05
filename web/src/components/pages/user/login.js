@@ -182,7 +182,7 @@ export default class Login extends Component {
                 <div
                   className='wrap-input100 validate-input'
                   data-validate='Enter username'
-                >
+                > 
                   <input
                     onChange={this._onTextFieldChange}
                     //value={_.get(user, "email", "")}
