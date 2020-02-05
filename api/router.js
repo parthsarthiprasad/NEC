@@ -150,7 +150,7 @@ exports.routers = (app) => {
 
         console.log("Got body command", body);
 
-        const payload = _.get(body, 'stream', false);
+        const payload = _.get(body, 'stream', true);
 
         // after receiving action from User owner of camera we need to send to RaspberryPi with stream not not stream.
 
