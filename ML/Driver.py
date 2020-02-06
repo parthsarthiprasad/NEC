@@ -102,37 +102,25 @@ class Classifier:
 Model=Classifier("VGG16",'Alt_4_ResNet.h5',['Anomaly','Normal'])
 
 i=0
-mem_loc = "F:/Projects/SIH/Anomaly-Videos-Part-1/Abuse"
+mem_loc = "./Original_Vid"
 vids = os.listdir(mem_loc)
-vid_name= vids[i]
-save_loc = "F:/Projects/SIH/Anomaly_Video/"
+save_loc = "./Anomaly_Vids/"
+done = []
 while True:
-    # Predicting on Video
-    text="00"
-    if i>9:
-        text="0"
-    elif i>99:
-        text=""
-    print(mem_loc +"/"+ vid_name + '.mp4')
-    pred=Model.classify(mem_loc +"/"+ vid_name,save_loc+vid_name.split(".")[0]+".avi")
-    i+=1
-    vid_name = vids[i%len(vids)]
-    if cv2.waitKey(1)==27:
-        break
-    if(len(pred)==1):
-        break
-    
-# Converting Prediction Data to suitable format 
-    # l=len(pred)
-    # num_partitions=2
-    # Arr1=[]
-    # Arr2=[]
-    # for i in range(num_partitions):
-    #     Arr1.append(str(np.average(pred[i*int(l/num_partitions):(i+1)*int(l/num_partitions),0])))
-    #     Arr2.append(str(np.average(pred[i*int(l/num_partitions):(i+1)*int(l/num_partitions),1])))
-    # data={"Anomaly":Arr1,"Normal":Arr2,"Time_Taken":[int((end-start)/num_partitions)]*num_partitions}
-    
-    # # Saving Data in File
-    # File_loc="Data"
-    # with open(File_loc+".json","w") as f:
-    #     json.dump(data,f)
+    for vid_name in vids:
+        if(vid_name in done):
+            continue
+        # Predicting on Video
+        text="00"
+        if i>9:
+            text="0"
+        elif i>99:
+            text=""
+        print(mem_loc +"/"+ vid_name + '.mp4')
+        pred=Model.classify(mem_loc +"/"+ vid_name,save_loc+vid_name.split(".")[0]+".avi")
+        i+=1
+        done.append(vid_name)
+        if cv2.waitKey(1)==27:
+            break
+        if(len(pred)==1):
+            break
