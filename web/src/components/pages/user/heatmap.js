@@ -317,7 +317,7 @@ export default class Heatmap extends Component{
                           <div className="col-md-3">
                             <div className="layers bd bgc-white p-20">
                               <div className="layer w-100 mB-10">
-                                <h6 className="lh-1">Total Page Views</h6>
+                                <h6 className="lh-1">Total Threats</h6>
                               </div>
                               <div className="layer w-100">
                                 <div className="peers ai-sb fxw-nw">
