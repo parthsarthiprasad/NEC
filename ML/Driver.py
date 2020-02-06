@@ -17,7 +17,7 @@ class Classifier:
             self.base_model =  ResNet50(weights='imagenet', include_top=False, input_shape=(160,120,3))
         else:
             print("Error: Base Model Not Defied")
-        self.class_model=load_model("F:/Projects/Computer-Vision-with-Python/My Projects/UAV/Threat Level Classifier/Models/"+class_model)
+        self.class_model=load_model("./Models/"+class_model)
         self.class_list=class_list
         print("Classifier Online")
         
@@ -111,11 +111,6 @@ while True:
         if(vid_name in done):
             continue
         # Predicting on Video
-        text="00"
-        if i>9:
-            text="0"
-        elif i>99:
-            text=""
         print(mem_loc +"/"+ vid_name + '.mp4')
         pred=Model.classify(mem_loc +"/"+ vid_name,save_loc+vid_name.split(".")[0]+".avi")
         i+=1
