@@ -111,11 +111,6 @@ while True:
         if(vid_name in done):
             continue
         # Predicting on Video
-        text="00"
-        if i>9:
-            text="0"
-        elif i>99:
-            text=""
         print(mem_loc +"/"+ vid_name + '.mp4')
         pred=Model.classify(mem_loc +"/"+ vid_name,save_loc+vid_name.split(".")[0]+".avi")
         i+=1
