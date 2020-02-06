@@ -17,7 +17,7 @@ class Classifier:
             self.base_model =  ResNet50(weights='imagenet', include_top=False, input_shape=(160,120,3))
         else:
             print("Error: Base Model Not Defied")
-        self.class_model=load_model("F:/Projects/Computer-Vision-with-Python/My Projects/UAV/Threat Level Classifier/Models/"+class_model)
+        self.class_model=load_model("./Models/"+class_model)
         self.class_list=class_list
         print("Classifier Online")
         

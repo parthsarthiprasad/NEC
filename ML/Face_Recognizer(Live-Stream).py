@@ -12,9 +12,9 @@ import dlib
 import requests
 
 # Initializing Face Detection & Recognition Models
-FR_model = load_model('nn4.small2.v1.h5')
+FR_model = load_model('./Models/nn4.small2.v1.h5')
 detector = dlib.get_frontal_face_detector()
-shape_predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+shape_predictor = dlib.shape_predictor("./Models/shape_predictor_68_face_landmarks.dat")
 threshold = 0.075
 
 # Initializing Face Database
