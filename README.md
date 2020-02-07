@@ -24,7 +24,7 @@ npm start
 ```
 
 ## Setup Nginx + Nginx-rtmp-module & Ffmpeg 
-Read the <a href="https://github.com/parthsarthiprasad/NEC/setup-nginx-ffmpeg-nginx-rtmp-module.md">documentation</a>
+Read the <a href="https://github.com/parthsarthiprasad/NEC/blob/master/setup-nginx-ffmpeg-nginx-rtmp-module.md">documentation</a>
 ## Results
 + results of ML-model has been added in outputs folder
 ## PPT
