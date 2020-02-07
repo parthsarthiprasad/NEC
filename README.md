@@ -30,4 +30,5 @@ Read the <a href="https://github.com/parthsarthiprasad/NEC/blob/master/setup-ngi
 ## PPT
 + problem statement has been added in the SEEU pdf
 
-
+## Question and Answers
++ added in QnA doc.
