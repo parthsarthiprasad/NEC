@@ -1,0 +1,11 @@
+o list any process listening to the port 3001:
+
+lsof -i:3001
+
+To kill any process listening to the port 3001:
+
+kill $(lsof -t -i:3001)
+
+or more violently:
+
+kill -9 $(lsof -t -i:3001)

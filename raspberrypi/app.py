@@ -39,7 +39,7 @@ class App:
             print(streaming_process)
 
             if streaming_process is None:
-                ffmpeg_command = 'ffmpeg -f v4l2 -r 30 -i /dev/video0 -deinterlace -vcodec libx264 -pix_fmt yuv420p -preset medium -g 60 -b:v 2500k -acodec libmp3lame -ar 44100 -threads 6 -qscale 3 -b:a 712000 -bufsize 512k -f flv rtmp://localhost/live/parthsarthiprasad'
+                ffmpeg_command = 'ffmpeg -f v4l2 -r 30 -i /dev/video0 -deinterlace -vcodec libx264 -pix_fmt yuv420p -preset medium -g 60 -b:v 2500k -acodec libmp3lame -ar 44100 -threads 6 -qscale 3 -b:a 712000 -bufsize 512k -f flv rtmp://localhost/live/BB'
 
                 streaming_process = subprocess.Popen(ffmpeg_command, shell=True, stdin=subprocess.PIPE)
                 # streaming_process.communicate()

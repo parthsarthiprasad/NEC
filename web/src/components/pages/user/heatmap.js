@@ -317,7 +317,11 @@ export default class Heatmap extends Component{
                           <div className="col-md-3">
                             <div className="layers bd bgc-white p-20">
                               <div className="layer w-100 mB-10">
+<<<<<<< HEAD
                                 <h6 className="lh-1">Total responses</h6>
+=======
+                                <h6 className="lh-1">Total Threats</h6>
+>>>>>>> 061aae257cca040b6c3280bf3bf8849c1daed0da
                               </div>
                               <div className="layer w-100">
                                 <div className="peers ai-sb fxw-nw">
