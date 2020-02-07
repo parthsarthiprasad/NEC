@@ -918,7 +918,11 @@ webpackJsonp(
                 ],
                 series: {
                   regions: [
+<<<<<<< HEAD
+                    { 
+=======
                     {
+>>>>>>> 061aae257cca040b6c3280bf3bf8849c1daed0da
                       values: { US: 760, SA: 760, AU: 760, IN: 2200, GB: 760 },
                       scale: ["#fffff", "#e25822"],
                       normalizeFunction: "polynomial"
